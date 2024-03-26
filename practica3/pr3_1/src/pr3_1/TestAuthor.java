@@ -11,13 +11,15 @@ public class TestAuthor {
         String email = scanner.next();
         System.out.print("Введите гендер автора: ");
         char gender = scanner.next().charAt(0);
-
-        Author obj = new Author(name, email, gender);
-        System.out.println("Name: " + obj.getName());
-        System.out.println("Email: " + obj.getEmail());
-        obj.setEmail("google@gmail.com");
-        System.out.println("New email: " + obj.getEmail());
-        System.out.println("Gender: " + obj.getGender());
-        System.out.println(obj.toString());
+        if (gender == 'M' || gender == 'F' || gender == 'U') {
+            Author obj = new Author(name, email, gender);
+            System.out.println("Name: " + obj.getName());
+            System.out.println("Email: " + obj.getEmail());
+            obj.setEmail("google@gmail.com");
+            System.out.println("New email: " + obj.getEmail());
+            System.out.println("Gender: " + obj.getGender());
+            System.out.println(obj.toString());
+        }
+        scanner.close();
     }
 }
