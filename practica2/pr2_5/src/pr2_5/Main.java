@@ -13,7 +13,7 @@ public class Main {
             }
         }
         if (n == 0) {
-            System.out.println(1);
+            System.out.println("Factorial(0) = 1");
         } else {
             int result = fact(n);
             System.out.println("Factorial("+n+") = "+result);
